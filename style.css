@@ -1,0 +1,82 @@
+html {
+  overflow: hidden;
+  font-family: 'Comic Sans MS', 'DFKai-SB';
+  background-color: #ADADAD;
+}
+.dail{
+    background-color: #F2E9DE;
+    font-size: 50px;
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    left: 50px;
+    margin: 200px 0px 0px 0px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.clock-container {
+  color: #FCFCFC;
+  text-shadow:1px 1px 3px 	#000000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 25px 3px #000, 0 0 10px rgba(0, 0, 0, 0.8) inset;
+  -webkit-mask-image: url(Pin by Donty on Animals _ Cat profile, Funny cute cats, Funny animal jokes.jpg);
+  -webkit-mask-repeat: no-repeat;
+}
+.clock-container .spear {/*透明框*/
+    z-index: 12;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -15px;
+    width: 160px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%, 
+      rgba(255,255,255,0) 40%, 
+      rgba(255,255,255,0) 60%, 
+      rgba(255,255,255,.15) 100%);
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-radius: 5%;
+    box-shadow: 0 4px 4px -3px rgba(0,0,0,0.1);
+}
+.clock-container .second, .clock-container .minute, .clock-container .hour {/*凹成一圈*/
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 100;
+  transition: 0.2s 0.2s ease-in;
+  transform: rotate(90deg);
+}
+.clock-container .second span, .clock-container .minute span, .clock-container .hour span {/*沒用會出事*/
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  transform-origin: 50%;
+  z-index: 5;
+}
+.clock-container .hour {
+  z-index: 150;
+  font-size: 28px;
+  font-weight: 400;
+}
+.clock-container .minute {
+  font-size: 16px;
+}
+.clock-container .second {
+  font-size: 12px;
+}
